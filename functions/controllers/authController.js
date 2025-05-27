@@ -31,9 +31,10 @@ exports.login = async (req, res) => {
 };
 
 exports.signUp = async (req, res) => {
-    const {email, name, username, password, reportId} = req.body;
+    const {email, name, username, password} = req.body;
     try {
-        const result = await pool.query("INSERT INTO bluegen.users column(email,name,username,password,reportId) VALUES ($1, $2, $3, $4, $5) RETURNING *", [email, name, username, password, reportId]);
+        const hashedPassword = await bcrypt.hash(password, 10);
+        await pool.query("INSERT INTO users (email,name,username,password) VALUES ($1, $2, $3, $4) RETURNING *", [email, name, username, hashedPassword]);
         res.status(201).json({ message: 'User created successfully' });
     } catch (error) {
         console.error('Error during signup:', error);
