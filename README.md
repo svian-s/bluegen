@@ -77,5 +77,5 @@ This repository represents the **early-stage backend implementation** of Blu:Gen
 
 ## Author
 
-Developed by Dylan Michael Jaya
-Mentored by Asvian Sulaeman
+* Developed by Dylan Michael Jaya
+* Mentored by Asvian Sulaeman
