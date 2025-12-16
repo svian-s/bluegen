@@ -1,59 +1,41 @@
-# Blu:Gen
+# Blu:Gen Backend
 
-Blu:Gen is a sustainability-focused web platform designed to encourage better waste management and recycling behavior through thoughtful design, accessibility, and incentives. The project explores how digital interfaces and behavioral insights can be used to address real-world environmental challenges in schools and communities.
+This repository contains the **backend code** for Blu:Gen, a sustainability-focused platform designed to support data handling, system logic, and future integrations for improved waste management and recycling initiatives.
 
-This repository currently contains the **front-end implementation** of the Blu:Gen platform.
-
----
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Future Work](#future-work)
-- [Author](#author)
+The backend serves as the foundation for managing application logic, data flow, and communication between the frontend interface and external systems.
 
 ---
 
-## Project Overview
+## About the Project
 
-In many urban environments, waste-management problems stem not only from infrastructure gaps but also from poor engagement, unclear information, and weak incentives. Blu:Gen was created to address this issue by rethinking how users interact with recycling systems.
+The Blu:Gen backend was developed to support the platform’s goal of encouraging better waste-management behavior through digital systems. While the frontend focuses on user interaction and design, the backend is responsible for structuring how data is processed, stored, and extended as the system scales.
 
-The platform focuses on:
-- Making waste sorting and recycling more intuitive
-- Reinforcing positive behavior through clear feedback
-- Designing systems that are accessible to non-technical users
-
-Blu:Gen is intended to be extensible, with future integration planned for data analytics, incentives, and physical waste-collection systems.
+This repository focuses on the **server-side architecture**, with an emphasis on clarity, modularity, and future extensibility.
 
 ---
 
 ## Features
 
-Current features include:
-- Responsive front-end interface
-- Clean and accessible UI design
-- Modular layout for easy expansion
-- Design informed by sustainability and behavioral principles
+- Backend logic for handling application requests  
+- Structured API endpoints to support frontend interaction  
+- Modular codebase designed for scalability  
+- Foundation for future data storage and analytics integration  
 
 ---
 
-## Tech Stack
+## Built With
 
-- **HTML**
-- **CSS**
-- **JavaScript**
+- JavaScript  
+- Node.js  
+- Express.js  
 
-The codebase is structured to support future backend and database integration.
+*(Exact components may evolve as additional features are implemented.)*
 
 ---
 
-## Installation
+## Getting Started
 
-To run this project locally:
+To run the backend locally:
 
 1. Clone the repository:
    ```bash
@@ -66,41 +48,38 @@ To run this project locally:
    cd bluegen
    ```
 
-3. Open the project in your browser:
+3. Install dependencies:
 
-   * Open `index.html` directly, or
-   * Use a local development server (e.g. Live Server)
+   ```bash
+   npm install
+   ```
+
+4. Start the server:
+
+   ```bash
+   npm start
+   ```
 
 ---
 
-## Usage
+## Project Status
 
-This repository currently demonstrates the front-end design and structure of the Blu:Gen platform. Users can explore the interface and layout as a prototype for a larger waste-management system.
+This repository represents the **early-stage backend implementation** of Blu:Gen. Core structure and routing are in place, with additional functionality planned as the platform expands.
 
 ---
 
-## Project Structure
+## Future Improvements
 
+* Database integration for persistent data storage
+* Authentication and user management
+* Analytics and impact-tracking features
+* Integration with smart waste stations or external services
+
+---
+
+## Author
+
+Developed by Dylan Michael Jaya
+Mentored by Asvian Sulaeman
 ```
-bluegen/
-│── index.html
-│── styles/
-│   └── style.css
-│── scripts/
-│   └── main.js
-│── assets/
-│   └── images/
-```
 
-*(Folder names may vary slightly depending on implementation.)*
-
----
-
-## Future Work
-
-Planned improvements include:
-
-* Backend integration for user accounts and data storage
-* Analytics dashboards to visualize recycling impact
-* Gamified incentives and progress tracking
-* Integration with smart bins or QR-based waste stations
