@@ -22,8 +22,8 @@ exports.login = async (req, res) => {
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Invalid username or password' });
         }
+        res.status(200).json({ message: 'Login successful', user_id: user.email, name: user.name, username:user.username});
 
-        res.status(200).json({ message: 'Login successful' });
     } catch (error) {
         console.error('Error during login:', error);
         res.status(500).json({ message: 'Internal server error' });
@@ -41,3 +41,23 @@ exports.signUp = async (req, res) => {
         res.status(500).json({ message: 'Internal server error:${error}' });
     }
 };
+
+exports.getEmailByUsername = async (req, res) => {
+  const { username } = req.body;
+
+  try {
+    const result = await pool.query(
+      'SELECT email FROM users WHERE username = $1',
+      [username]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.status(200).json({ email: result.rows[0].email });
+  } catch (error) {
+    console.error('Error fetching email:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+}; 
